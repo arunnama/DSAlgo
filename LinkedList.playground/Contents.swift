@@ -12,4 +12,23 @@ class LinkedListNode<T> {
     }
 }
 
+class LinkedList {
+    
+    var head: LinkedListNode<Any>?
+    var tail: LinkedListNode<Any>?
+    
+    var count = 0
+    var isEmpty = true
+    
+    public func addNode(node: LinkedListNode<Any>) {
+        var mynode = head
+        while mynode?.next != nil {
+            mynode = mynode?.next
+        }
+        
+        mynode?.next = node
+    }
+
+}
+
 
